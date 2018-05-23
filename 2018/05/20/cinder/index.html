@@ -112,10 +112,13 @@
 <meta property="og:site_name" content="HelloC">
 <meta property="og:description" content="Cinder的内部架构 三个主要组成部分  cinder-api 组件负责向外提供Cinder REST API  cinder-scheduler 组件负责分配存储资源  cinder-volume 组件负责封装driver，不同的driver负责控制不同的后端存储      组件之间的RPC靠消息队列（Queue）实现  Cinder的开发工作主要集中在scheduler和driver，以便提">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T16:40:21.587Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png">
+<meta property="og:updated_time" content="2018-05-23T14:19:28.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cinder">
 <meta name="twitter:description" content="Cinder的内部架构 三个主要组成部分  cinder-api 组件负责向外提供Cinder REST API  cinder-scheduler 组件负责分配存储资源  cinder-volume 组件负责封装driver，不同的driver负责控制不同的后端存储      组件之间的RPC靠消息队列（Queue）实现  Cinder的开发工作主要集中在scheduler和driver，以便提">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png">
 
 
 
@@ -345,9 +348,10 @@
 <li><p>Volume元数据和状态保存在Database中</p>
 </li>
 </ul>
-<p>![cinder-framework][<a href="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png" target="_blank" rel="external">https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png</a>]</p>
+<p><img src="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png" alt="cinder-framework"></p>
 <p>cinder内部各组件之间使用基于RabbitMQ的RPC通信。cinder-scheduler和cinder-volume分别会创建RPC连接，启动消费者线程，然后等待队列消息。当轮询查询到消息到达后，创建线程处理相关消息。</p>
-<h2 id="基本场景"><a href="#基本场景" class="headerlink" title="基本场景"></a>基本场景</h2><p>![cinder-scenario][<a href="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png" target="_blank" rel="external">https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png</a>]</p>
+<a id="more"></a>
+<h2 id="基本场景"><a href="#基本场景" class="headerlink" title="基本场景"></a>基本场景</h2><p><img src="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png" alt="cinder-scenario"></p>
 
       
     </div>

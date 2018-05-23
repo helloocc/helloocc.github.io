@@ -325,8 +325,7 @@
 
       
         
-          
-            <h2 id="Cinder的内部架构"><a href="#Cinder的内部架构" class="headerlink" title="Cinder的内部架构"></a>Cinder的内部架构</h2><ul>
+          <h2 id="Cinder的内部架构"><a href="#Cinder的内部架构" class="headerlink" title="Cinder的内部架构"></a>Cinder的内部架构</h2><ul>
 <li><p>三个主要组成部分</p>
 <ul>
 <li><p>cinder-api 组件负责向外提供Cinder REST API</p>
@@ -346,11 +345,15 @@
 <li><p>Volume元数据和状态保存在Database中</p>
 </li>
 </ul>
-<p>![cinder-framework][<a href="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png" target="_blank" rel="external">https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png</a>]</p>
+<p><img src="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-framework.png" alt="cinder-framework"></p>
 <p>cinder内部各组件之间使用基于RabbitMQ的RPC通信。cinder-scheduler和cinder-volume分别会创建RPC连接，启动消费者线程，然后等待队列消息。当轮询查询到消息到达后，创建线程处理相关消息。</p>
-<h2 id="基本场景"><a href="#基本场景" class="headerlink" title="基本场景"></a>基本场景</h2><p>![cinder-scenario][<a href="https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png" target="_blank" rel="external">https://raw.githubusercontent.com/helloocc/Hexo/master/source/_posts/images/cinder-scenario.png</a>]</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/20/cinder/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
